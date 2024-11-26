@@ -1,7 +1,7 @@
 import express, { urlencoded } from 'express'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
-import { LIMIT } from './constants'
+import { LIMIT } from './constants.js'
 
 const app = express()
 
@@ -20,6 +20,6 @@ app.use(express.urlencoded({
 
 app.use(express.static("public"))
 
-app.use(express.cookieParser())
+app.use(cookieParser())
 
 export default app
